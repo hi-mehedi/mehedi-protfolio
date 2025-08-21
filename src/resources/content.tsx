@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Logo } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Md. Mehedi Hasan",
+  lastName: "Soumik",
+  name: `Md. Mehedi Hasan Soumik`,
+  role: "SQA Engineer",
+  avatar: "/images/projects/avatar.jpg",
+  email: "mehedihasan.mehedi607@gmail.com",
+  location: "Asia/Dhaka", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Bangla"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -29,17 +29,17 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/hi-mehedi",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/mehedi-soumik/",
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.com/",
   },
   {
     name: "Email",
@@ -54,25 +54,21 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building bridges between requirements and quality</>,
   featured: {
     display: true,
     title: (
       <>
-        Recent project: <strong className="ml-4">Once UI</strong>
+        Recent project: <strong className="ml-4">JVAI</strong>
       </>
     ),
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+       I'm Mehedi, a SQA engineer at <strong>JVAI</strong>, where I craft intuitive
+       <br />
+       user experiences. After hours, I build my own projects.
     </>
   ),
 };
@@ -98,10 +94,9 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        I am a dedicated Software Quality Assurance (SQA) Engineer with expertise in manual testing, API testing, performance testing, and automation testing. I have hands-on experience using tools like Postman, JMeter, Selenium, TestNG, and Aquality Services to ensure software quality and reliability.
+
+        I am skilled in requirement analysis, test planning, test case design, execution, and reporting, and I actively apply BDD (Behavior-Driven Development) practices to bridge the gap between technical and business requirements. I thrive in agile environments and am committed to continuous learning and professional growth.
       </>
     ),
   },
@@ -110,23 +105,27 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Join Venture AI",
+        timeframe: "2025 - Present",
+        role: "SQA Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
-          </>,
+              Designed and executed automated test suites using Selenium and TestNG, improving test coverage and reducing regression issues by 40%.
+            </>,
+            <>
+              Implemented API testing workflows with Postman and Newman, ensuring robust and reliable backend services.
+            </>,
+            <>
+              Applied BDD practices to create clear and maintainable test scenarios, bridging communication between QA and development teams.
+            </>,
+            <>
+              Conducted performance testing with JMeter, identifying bottlenecks and optimizing application response times by 25%.
+            </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
+            src: "/images/projects/project-01/header_jmeter.jpg",
             alt: "Once UI Project",
             width: 16,
             height: 9,
@@ -134,19 +133,23 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
-          </>,
-        ],
+     company: "A1qa.",
+     timeframe: "2024 - 2025",
+     role: "QA Automation Engineer",
+     achievements: [
+       <>
+         Designed and implemented automated test suites using Selenium and TestNG, improving regression testing efficiency by 35%.
+       </>,
+       <>
+         Conducted API testing with Postman and Newman, validating backend functionality and generating detailed reports for stakeholders.
+       </>,
+       <>
+         Applied BDD practices to create readable and maintainable test scenarios, bridging communication between QA and development teams.
+       </>,
+       <>
+         Performed performance and load testing using JMeter, identifying bottlenecks and optimizing application speed by 20%.
+       </>,
+     ],
         images: [],
       },
     ],
@@ -156,12 +159,12 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Daffodil International University",
+        description: <>Computer Science and Engineering.</>,
       },
       {
         name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        description: <>Focused on enhancing software quality through manual, API, and automated testing using modern QA practices.</>,
       },
     ],
   },
@@ -170,20 +173,20 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Automation with Selenium",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Experienced in building reliable test automation scripts using Selenium, TestNG, and Aquality Services to ensure software quality and efficiency.</>
         ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/projects/project-01/selenium-automation.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/images/projects/project-01/software-testing.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -191,14 +194,14 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "API Testing using Postman",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Skilled in testing and validating APIs using Postman, creating automated test scripts, and generating detailed reports with Newman.</>
         ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/projects/project-01/postman-api.jpg",
             alt: "Project image",
             width: 16,
             height: 9,

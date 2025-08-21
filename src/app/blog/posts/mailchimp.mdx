@@ -1,108 +1,57 @@
 ---
-title: "Set up Mailchimp and collect emails"
-summary: "Set up the Mailchimp newsletter block for your Magic Portfolio."
-publishedAt: "2025-04-16"
-tag: "Magic Portfolio"
+title: "🌦️ Aquality Selenium Java - AccuWeather Automation Framework"
+summary: "A test automation framework built with Aquality Selenium, TestNG, and Allure Reporting, designed for validating AccuWeather functionalities."
+publishedAt: "2025-08-21"
+tag: "Automation Testing"
 ---
 
-## Mailchimp account
+## Overview
 
-Sign up for a [Mailchimp account](https://mailchimp.com) and create a new list if you don't have one.
+The **AccuWeather Automation Framework** is built using **Aquality Selenium (Java)** and **TestNG**, designed to test weather forecast functionalities and ensure platform reliability. It also integrates **Allure Reporting** for detailed test insights.
 
-## Embed form
+This framework demonstrates best practices in **automation architecture**, **test scalability**, and **reporting setup**.
 
-Create a new [embed form](https://mailchimp.com/help/add-a-signup-form-to-your-website/) and copy the form URL to your Magic Portfolio config.
+---
 
-<CodeBlock
-    highlight="2"
-    codes={[
-  {
-    code:
-`const mailchimp = {
-    action: 'https://url/subscribe/post?parameters',
-    effects: {
-      ...
-    }
-};`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+## Key Features
 
-## Newsletter content
+- 🚀 **Aquality Selenium (Java)** for reliable cross-browser automation.
+- ✅ **TestNG integration** for structured test execution.
+- 📊 **Allure Reporting** for clear and visual test results.
+- ⚡ **Maven support** for build and dependency management.
+- 🔧 **Page Object Model (POM)** design for maintainable test code.
 
-You can modify the headline and description in the `content.js` file.
+---
 
-<CodeBlock
-    highlight="2"
-    codes={[
-  {
-    code:
-`const newsletter = {
-    display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: (
-      <>
-        I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.
-      </>
-    ),
-};`, 
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
+## Setup
 
-## Background effect
+Update your `pom.xml` with required dependencies for:
 
-There's a pre-configured background in `Mailchimp.tsx` that you can modify in the `mailchimp` object. Set graphic elements such as gradient, dots, lines, and grid and configure their appearance for the newsletter block.
+- `aquality-selenium`
+- `testng`
+- `allure-testng`
+
+---
+
+## Example Test
 
 <CodeBlock
-    codeHeight={24}
     marginBottom="16"
+    highlight="4"
     codes={[
-  {
-    code:
-`const mailchimp = {
-    action: 'https://url/subscribe/post?parameters',
-    effects: {
-      mask: {
-        cursor: false,
-        x: 50,
-        y: 0,
-        radius: 100
-      },
-      gradient: {
-        display: true,
-        x: 50,
-        y: -25,
-        width: 100,
-        height: 100,
-        tilt: 0,
-        colorStart: 'accent-background-strong',
-        colorEnd: 'static-transparent',
-        opacity: 50
-      },
-      dots: {
-        display: true,
-        size: 2,
-        color: 'brand-on-background-weak',
-        opacity: 20
-      },
-      lines: {
-        display: false,
-        color: 'neutral-alpha-weak',
-        opacity: 100
-      },
-      grid: {
-        display: false,
-        color: 'neutral-alpha-weak',
-        opacity: 100,
-        width: 'var(--static-space-32)',
-        height: 'var(--static-space-32)'
+      {
+        code:
+`@Test
+public void verifyWeatherSearch() {
+    HomePage homePage = new HomePage();
+    homePage.inputTextSearchBox("New York");
+    Assert.assertTrue(homePage.isWeatherDisplayed(), "Weather info not displayed!");
+}`,
+        language: "java",
+        label: "src/test/java/tests/WeatherSearchTest.java"
       }
-  }
-}`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+    ]}
+/>
+
+---
+

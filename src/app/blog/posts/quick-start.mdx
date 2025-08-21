@@ -1,46 +1,57 @@
 ---
-title: "Quick start with Magic Portfolio"
-summary: "Magic Portfolio is a comprehensive, MDX-based, SEO-friendly, responsive portfolio template built with Once UI and Next.js."
-image: "/images/og/home.jpg"
-publishedAt: "2025-04-23"
-tag: "Magic Portfolio"
+title: "🌦️ Aquality Selenium Java - AccuWeather Automation Framework"
+summary: "A test automation framework built with Aquality Selenium, TestNG, and Allure Reporting, designed for validating AccuWeather functionalities."
+publishedAt: "2025-08-21"
+tag: "Automation Testing"
 ---
 
-## About
+## Overview
 
-Magic Portfolio is a comprehensive, MDX-based, SEO-friendly, responsive portfolio template built with Once UI and Next.js.
+The **AccuWeather Automation Framework** is built using **Aquality Selenium (Java)** and **TestNG**, designed to test weather forecast functionalities and ensure platform reliability. It also integrates **Allure Reporting** for detailed test insights.
 
-## License
+This framework demonstrates best practices in **automation architecture**, **test scalability**, and **reporting setup**.
 
-Magic Portfolio is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). You can only use it for personal purposes, and you must attribute the original work. The attribution is added in the footer by default, but you can place it in any other, visible part of your site.
+---
 
-Subscribe to the [Once UI Pro plan](https://once-ui.com/pricing) to extend the license to [Dopler CC](https://once-ui.com/products/magic-portfolio).
+## Key Features
 
-## Quick start
+- 🚀 **Aquality Selenium (Java)** for reliable cross-browser automation.
+- ✅ **TestNG integration** for structured test execution.
+- 📊 **Allure Reporting** for clear and visual test results.
+- ⚡ **Maven support** for build and dependency management.
+- 🔧 **Page Object Model (POM)** design for maintainable test code.
 
-Clone the git repository:
+---
 
-<CodeBlock compact marginBottom="16" codes={[
-  {
-    code: "git clone https://github.com/once-ui-system/magic-portfolio.git",
-    language: "bash"
-  }
-]} />
+## Setup
 
-Install the necessary dependencies:
+Update your `pom.xml` with required dependencies for:
 
-<CodeBlock compact marginBottom="16" codes={[
-  {
-    code: "npm install",
-    language: "bash"
-  }
-]} />
+- `aquality-selenium`
+- `testng`
+- `allure-testng`
 
-Start the local development server:
+---
 
-<CodeBlock compact marginBottom="16" codes={[
-  {
-    code: "npm run dev",
-    language: "bash"
-  }
-]} />
+## Example Test
+
+<CodeBlock
+    marginBottom="16"
+    highlight="4"
+    codes={[
+      {
+        code:
+`@Test
+public void verifyWeatherSearch() {
+    HomePage homePage = new HomePage();
+    homePage.inputTextSearchBox("New York");
+    Assert.assertTrue(homePage.isWeatherDisplayed(), "Weather info not displayed!");
+}`,
+        language: "java",
+        label: "src/test/java/tests/WeatherSearchTest.java"
+      }
+    ]}
+/>
+
+---
+

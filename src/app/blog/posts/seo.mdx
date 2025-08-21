@@ -1,29 +1,39 @@
 ---
-title: "SEO settings for Magic Portfolio"
-summary: "Manage your Magic Portfolio's SEO settings."
-publishedAt: "2025-04-14"
-tag: "Magic Portfolio"
+title: "🌦️ Aquality Selenium Java - AccuWeather Automation Framework"
+summary: "A test automation framework built with Aquality Selenium, TestNG, and Allure Reporting, designed for validating AccuWeather functionalities."
+publishedAt: "2025-08-21"
+tag: "Automation Testing"
 ---
 
-## Meta tags
+## Overview
 
-Magic Portfolio automatically generates meta- and open graph tags for your pages based on the `content.js` file.
+The **AccuWeather Automation Framework** is built using **Aquality Selenium (Java)** and **TestNG**, designed to test weather forecast functionalities and ensure platform reliability. It also integrates **Allure Reporting** for detailed test insights.
 
-## Schema
+This framework demonstrates best practices in **automation architecture**, **test scalability**, and **reporting setup**.
 
-Magic Portfolio automatically generates schema tags for your pages based on the `content.js` file.
+---
 
-## Open Graph image
+## Key Features
 
-Social sharing images (open-graph and twitter) are automatically generated with `next/og`.
+- 🚀 **Aquality Selenium (Java)** for reliable cross-browser automation.
+- ✅ **TestNG integration** for structured test execution.
+- 📊 **Allure Reporting** for clear and visual test results.
+- ⚡ **Maven support** for build and dependency management.
+- 🔧 **Page Object Model (POM)** design for maintainable test code.
 
-<Feedback
-    icon
-    marginBottom="16"
-    description={<>
-        Make sure you have updated the <InlineCode>content.js</InlineCode> file with your own information and the <InlineCode>baseURL</InlineCode> variable in the <InlineCode>config.js</InlineCode> file.
-    </>}
-/>
+---
+
+## Setup
+
+Update your `pom.xml` with required dependencies for:
+
+- `aquality-selenium`
+- `testng`
+- `allure-testng`
+
+---
+
+## Example Test
 
 <CodeBlock
     marginBottom="16"
@@ -31,16 +41,17 @@ Social sharing images (open-graph and twitter) are automatically generated with 
     codes={[
       {
         code:
-`export async function generateMetadata() {
-  const title = home.title;
-  const description = home.description;
-  const ogImage = \`https://\/api/og/generate?title=\${encodeURIComponent(title)}\`;
-   ...
-};`,
-        language: "tsx",
-        label: "src/app/{page}/page.tsx"
+`@Test
+public void verifyWeatherSearch() {
+    HomePage homePage = new HomePage();
+    homePage.inputTextSearchBox("New York");
+    Assert.assertTrue(homePage.isWeatherDisplayed(), "Weather info not displayed!");
+}`,
+        language: "java",
+        label: "src/test/java/tests/WeatherSearchTest.java"
       }
     ]}
 />
 
-The above declaration generates the social image with the title of the page. You can use a static image by replacing the `ogImage` value with a path to an image in the `public` directory.
+---
+

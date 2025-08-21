@@ -1,8 +1,57 @@
 ---
-title: "Localized version of Magic Portfolio"
-summary: "Magic Portfolio was localized by François Hernandez."
-publishedAt: "2025-04-15"
-tag: "Magic Portfolio"
+title: "🌦️ Aquality Selenium Java - AccuWeather Automation Framework"
+summary: "A test automation framework built with Aquality Selenium, TestNG, and Allure Reporting, designed for validating AccuWeather functionalities."
+publishedAt: "2025-08-21"
+tag: "Automation Testing"
 ---
 
-In the latest version of Magic Portfolio, localization is no longer supported. However, the localized version created by [François Hernandez](https://github.com/francoishernandez) is still available as a [separate branch](https://github.com/once-ui-system/magic-portfolio/tree/localization-(Once-UI-0.4.2)). This branch will not receive further updates.
+## Overview
+
+The **AccuWeather Automation Framework** is built using **Aquality Selenium (Java)** and **TestNG**, designed to test weather forecast functionalities and ensure platform reliability. It also integrates **Allure Reporting** for detailed test insights.
+
+This framework demonstrates best practices in **automation architecture**, **test scalability**, and **reporting setup**.
+
+---
+
+## Key Features
+
+- 🚀 **Aquality Selenium (Java)** for reliable cross-browser automation.
+- ✅ **TestNG integration** for structured test execution.
+- 📊 **Allure Reporting** for clear and visual test results.
+- ⚡ **Maven support** for build and dependency management.
+- 🔧 **Page Object Model (POM)** design for maintainable test code.
+
+---
+
+## Setup
+
+Update your `pom.xml` with required dependencies for:
+
+- `aquality-selenium`
+- `testng`
+- `allure-testng`
+
+---
+
+## Example Test
+
+<CodeBlock
+    marginBottom="16"
+    highlight="4"
+    codes={[
+      {
+        code:
+`@Test
+public void verifyWeatherSearch() {
+    HomePage homePage = new HomePage();
+    homePage.inputTextSearchBox("New York");
+    Assert.assertTrue(homePage.isWeatherDisplayed(), "Weather info not displayed!");
+}`,
+        language: "java",
+        label: "src/test/java/tests/WeatherSearchTest.java"
+      }
+    ]}
+/>
+
+---
+
