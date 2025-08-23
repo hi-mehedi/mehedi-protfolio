@@ -212,7 +212,7 @@ const about: About = {
   },
 };
 
-const blog: blog = {
+const blog: Blog = {
   path: "/projects",
   label: "Project",
   title: "Writing about design and tech...",
