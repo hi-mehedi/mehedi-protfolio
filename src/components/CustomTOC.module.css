@@ -1,0 +1,67 @@
+.customToc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.tocItem {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  line-height: 1.4;
+  padding: 4px 0;
+  border-radius: 4px;
+}
+
+.tocItem:hover {
+  color: #000;
+  background-color: #f5f5f5;
+}
+
+.tocLevel2 {
+  font-weight: 600;
+  padding-left: 0;
+}
+
+.tocLevel3 {
+  font-weight: 500;
+  padding-left: 12px;
+}
+
+.tocLevel4 {
+  font-weight: 400;
+  padding-left: 24px;
+}
+
+.tocLevel5 {
+  font-weight: 400;
+  padding-left: 36px;
+}
+
+.tocLevel6 {
+  font-weight: 400;
+  padding-left: 48px;
+}
+
+/* Scrollbar styling */
+.customToc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.customToc::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.customToc::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.customToc::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

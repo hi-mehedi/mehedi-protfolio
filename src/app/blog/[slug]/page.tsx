@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import { CustomMDX, ScrollToHash } from "@/components";
-import { Meta, Schema, AvatarGroup, Button, Column, Heading, HeadingNav, Icon, Row, Text } from "@once-ui-system/core";
+import { CustomMDX, ScrollToHash, CustomTOC } from "@/components"; // Added CustomTOC import
+import { Meta, Schema, AvatarGroup, Button, Column, Heading, Icon, Row, Text } from "@once-ui-system/core";
 import { baseURL, about, blog, person } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
 import { getPosts } from "@/utils/utils";
@@ -99,7 +99,7 @@ export default async function Blog({
           <Icon name="document" size="xs" />
           On this page
         </Row>
-        <HeadingNav fitHeight/>
+        <CustomTOC /> {/* Replaced HeadingNav with CustomTOC */}
       </Column>
     </Row>
   );

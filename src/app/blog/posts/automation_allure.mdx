@@ -1,12 +1,21 @@
 ---
-title: "🖥️✨ Data-Driven Login Automation for Rokomari.com"
-summary: "A Selenium + TestNG framework with Excel-driven test data, ExtentReports, and screenshot support for Rokomari.com login automation."
+title: "⚡ Selenium Automation Projects Showcase"
+summary: "A collection of Java + TestNG based automation frameworks demonstrating Data-Driven Testing, Allure Reports, and best practices."
 publishedAt: "2025-08-23"
 tag: "Automation Testing"
 ---
 
-## Overview
+# 🚀 Selenium Automation Projects Showcase
 
+This post highlights two of my automation frameworks —
+one demonstrating **data-driven testing with Excel + ExtentReports** for [Rokomari.com](https://www.rokomari.com/login),
+and the other showcasing **Aquality Selenium with Allure Reports** for scalable test reporting.
+
+---
+
+## 🖥️✨ Data-Driven Login Automation for Rokomari.com
+
+### Overview
 The **Rokomari Login Automation Framework** is built using **Java, Selenium WebDriver, and TestNG**, designed to automate login scenarios on [Rokomari.com](https://www.rokomari.com/login).
 
 It leverages **Excel for data-driven testing** and **ExtentReports** for detailed reporting with screenshots on both pass and fail cases.
@@ -15,8 +24,7 @@ This framework demonstrates best practices in **automation scalability**, **repo
 
 ---
 
-## Key Features
-
+### Key Features
 - ✅ **Valid and invalid login scenarios** with email/password combinations.
 - 📊 **Excel-integrated DataProvider** for flexible test data management.
 - 📸 **ExtentReports with screenshots** on success and failure.
@@ -25,18 +33,7 @@ This framework demonstrates best practices in **automation scalability**, **repo
 
 ---
 
-## Setup
-
-Update your `pom.xml` with dependencies for:
-
-- `selenium-java`
-- `testng`
-- `apache-poi` (for Excel integration)
-- `extentreports`
-
----
-
-## Example Test
+### Example Test
 
 <CodeBlock
     marginBottom="16"
@@ -66,7 +63,36 @@ public void testLogin(String email, String password, String expectedResult) {
 
 ---
 
-## GitHub Repository
-
+### GitHub Repository
 Check the full project here:
-[Data-driven Login Automation for Rokomari.com](https://github.com/hi-mehedi/Data-driven-login-automation-test-for-Rokomari.com.git)
+[ Data-driven Login Automation for Rokomari.com ](https://github.com/hi-mehedi/Data-driven-login-automation-test-for-Rokomari.com.git)
+
+---
+
+## 📊 Aquality Automation with Allure Report
+
+### Overview
+This project demonstrates test automation using **Aquality Selenium** along with beautiful **Allure Reports**.
+It showcases how to build a maintainable, scalable automation framework in **Java + Maven + TestNG**.
+
+---
+
+### Tech Stack
+- ☕ **Java (JDK 21)**
+- 📦 **Maven** (Dependency Management & Build)
+- 🌐 **Aquality Selenium** (Browser automation & services)
+- 🧪 **TestNG** (Test runner & configuration)
+- 📊 **Allure Report** (Test reporting & visualization)
+
+---
+
+### How to Run Tests
+Clone the repository and run:
+
+```bash
+git clone https://github.com/hi-mehedi/aquality-automation-and-allure-report.git
+cd aquality-automation-and-allure-report
+
+mvn clean test
+
+allure serve target/allure-results

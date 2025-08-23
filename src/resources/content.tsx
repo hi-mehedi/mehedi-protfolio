@@ -59,7 +59,7 @@ const home: Home = {
     display: true,
     title: (
       <>
-        Recent project: <strong className="ml-4">JVAI</strong>
+        Recent project: <strong className="ml-4">Aquality Selenium</strong>
       </>
     ),
     href: "/work/building-once-ui-a-customizable-design-system",
@@ -134,7 +134,7 @@ const about: About = {
       },
       {
      company: "A1qa.",
-     timeframe: "2024 - 2025",
+     timeframe: "2025 - Present(Part Time)",
      role: "QA Automation Engineer",
      achievements: [
        <>
@@ -212,9 +212,9 @@ const about: About = {
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
+const blog: blog = {
+  path: "/projects",
+  label: "Project",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
@@ -241,12 +241,12 @@ const gallery: Gallery = {
     {
       src: "/images/gallery/horizontal-1.jpg",
       alt: "image",
-      orientation: "horizontal",
+      orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-2.jpg",
+      src: "/images/gallery/received_1342310803144180.jpeg",
       alt: "image",
-      orientation: "horizontal",
+      orientation: "vertical",
     },
     {
       src: "/images/gallery/horizontal-3.jpg",
