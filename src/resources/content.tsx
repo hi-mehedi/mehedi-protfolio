@@ -50,7 +50,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/boss.jpg",
+  image: "/images/og/MehediHasan.png",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
@@ -68,7 +68,7 @@ const home: Home = {
     <>
        I'm Mehedi, a SQA engineer at <strong>JVAI</strong>, where I craft intuitive
        <br />
-       user experiences. After hours, I build my own projects.
+       user experiences.
     </>
   ),
 };
