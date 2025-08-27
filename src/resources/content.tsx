@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Soumik",
   name: `Md. Mehedi Hasan Soumik`,
   role: "SQA Engineer",
-  avatar: "/images/projects/avatar.jpg",
+  avatar: "/images/projects/Mehedi_Hasan.jpg",
   email: "mehedihasan.mehedi607@gmail.com",
   location: "Asia/Dhaka", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bangla"], // optional: Leave the array empty if you don't want to display languages
@@ -17,8 +17,7 @@ const newsletter: Newsletter = {
   title: <>Subscribe to {person.name}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the
-      intersection of creativity and engineering.
+      I occasionally write about Software Quality Assurance, sharing insights on the intersection of creativity, precision, and engineering.
     </>
   ),
 };
@@ -249,34 +248,24 @@ const gallery: Gallery = {
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-3.jpg",
+      src: "/images/gallery/photo_6158923862436333148_y.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/IMG_20250827_135604_923~2.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/photo_6158923862436333149_y.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/avatar.jpg",
       alt: "image",
       orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
     },
   ],
 };
