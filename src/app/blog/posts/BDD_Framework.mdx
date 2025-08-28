@@ -1,0 +1,182 @@
+---
+title: "🌤️✨ AccuWeather BDD Automation Test Suite"
+summary: "A Cucumber + Selenium BDD framework with multi-feature testing, Allure Reports, and parallel execution for AccuWeather.com"
+publishedAt: "2025-08-28"
+tag: "Automation Testing"
+---
+
+## Overview
+
+The **AccuWeather Automation Test Suite** is built using **Java, Selenium WebDriver, and Cucumber**, designed to automate multiple user scenarios on [AccuWeather.com](https://www.accuweather.com).
+
+It leverages **Gherkin BDD syntax** for test documentation and **Allure Reports** for detailed reporting with screenshots on both pass and fail cases. This framework demonstrates best practices in **behavior-driven development**, **page object model**, and **parallel test execution**.
+
+---
+
+## Key Features
+
+- ✅ **Current Location Detection** - Verifies current location label appears
+- 🔍 **City Search Functionality** - Tests city search and result validation
+- 🕒 **Recent Locations** - Ensures recently searched cities are saved
+- 🌡️ **Temperature Unit Conversion** - Validates Celsius to Fahrenheit conversion
+- 📊 **BDD with Cucumber** - Business-readable test scenarios
+- ⚡ **Parallel Execution** - TestNG parallel test execution
+- 📸 **Allure Reports** - Detailed reporting with screenshots
+
+---
+
+## Setup
+
+Update your `pom.xml` with dependencies for:
+
+- `selenium-java`
+- `cucumber-java`
+- `cucumber-testng`
+- `aquality-selenium`
+- `allure-cucumber`
+
+---
+
+## Example Feature
+
+```gherkin:src/test/java/features/temperature_unit.feature
+Feature: Temperature Unit
+  I am a user
+  I want to handel temperature unit
+  To be copy and go to setting change unit
+  To be displayed Fahrenheit
+
+  Scenario: Change temperature unit from Celsius to Fahrenheit
+    Then The temperature should be indicated in Metric "C"
+    When I click Menu Button
+    And  I Click Setting Link
+    Then The settings page is displayed
+    When I change temperature Unit "F"
+    And I navigate back
+    Then The temperature should be indicated in Metric "F"
+```
+ ## Example Step Definition
+```
+ public class HomePageStep {
+     HomePage homePage = new HomePage();
+     WeatherForecastPage weatherForecastPage = new WeatherForecastPage();
+
+       @Then("The temperature should be indicated in Metric {string}")
+         public void verifyTemUnitIsCelsius(String unitTem){
+             step("Verify TemUnit is :" +unitTem);
+             Assert.assertTrue(homePage.getTempDisplayed().contains(unitTem), "Temperature unit is not displayed as" +unitTem);
+         }
+
+         @When("I click Menu Button")
+         public void clickMenu(){
+             step("Click Menu Button");
+             homePage.clickMenuBtn();
+         }
+
+         @When("I Click Setting Link")
+         public void ClickSettingLink(){
+             step("Click Settings");
+             homePage.clickSetting();
+         }
+ }
+```
+## Page Object Example
+```
+public class HomePage extends Form {
+    private final ITextBox searchBox = getElementFactory().getTextBox(By.xpath("//input[@name='query']"), "Click Search Box");
+    private final ILabel searchResultContainer = getElementFactory().getLabel(By.className("results-container"), "Results Container");
+    private final ILabel currentLocationLabel = getElementFactory().getLabel(By.xpath("//span[contains(@class,'current-location-text')]"),
+            "Current Location Label");
+    private final IButton menuBtn = AqualityServices.getElementFactory().getButton(By.xpath("//*[@data-qa='navigationMenu']"), "Menu");
+
+    public HomePage(){
+        super(By.className("search-input"), "Home Page");
+    }
+
+    public void inputTextSearchBox(String cityName){
+        searchBox.clearAndType(cityName);
+    }
+
+    public boolean isResultDisplayed(){
+        return searchResultContainer.state().waitForDisplayed();
+    }
+
+    public void clickFirstResult() {
+        try {
+            ILabel firstResult = getResultElements().getFirst();
+            firstResult.state().waitForClickable();
+            firstResult.click();
+        } catch (NoSuchElementException e) {
+            throw new RuntimeException("No search results found to click.", e);
+        }
+    }
+
+    public void clickFirstRecentRes() {
+        try {
+            ILabel firstResult = getRecentElements().getFirst(); // NoSuchElementException if empty
+            firstResult.state().waitForClickable();
+            firstResult.click();
+        } catch (NoSuchElementException e) {
+            throw new RuntimeException("No search results found to click.", e);
+        }
+    }
+    public void clickSearchBox(){
+        searchBox.click();
+    }
+
+    public boolean isCurrentLocationDisplayed(){
+        return currentLocationLabel.state().waitForDisplayed();
+    }
+
+    public List<String> getTempDisplayed() {
+        List<String> tempTexts = new ArrayList<>();
+        for (ILabel label : getTempElements()) {
+            tempTexts.add(label.getText());
+        }
+        return tempTexts;
+    }
+
+    public void clickMenuBtn(){
+        menuBtn.click();
+    }
+
+    public void clickSetting(){
+        getElementFactory().getButton(By.className("settings-link"),
+                "Settings Button").click();
+    }
+
+    private List<ILabel> getTempElements() {
+        return AqualityServices.getElementFactory().findElements(By.xpath("//span[contains(@class, 'recent-location-temp-unit')]")
+                , ElementType.LABEL);
+    }
+
+    private List<ILabel> getRecentElements() {
+        return AqualityServices.getElementFactory().findElements(By.xpath("//div[contains(@class, 'recent-locaton-name-wrapper')]")
+                , ElementType.LABEL);
+    }
+
+    private List<ILabel> getResultElements() {
+        return AqualityServices.getElementFactory().findElements(By.xpath("//div[contains(@class, 'search-bar-result') and contains(@class, 'source-radar')]")
+                , ElementType.LABEL);
+    }
+}
+```
+Generate Allure reports:
+```
+allure serve target/allure-results
+```
+## GitHub Repository
+
+[AccuWeather BDD Automation Test Suite](https://github.com/hi-mehedi/BDD_Framweok_Accuweather.git)
+
+## Demo
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://jam.dev/c/66d088a7-677c-445b-ac70-e6d04edab1bd?startFrom=3.81"
+  title="AccuWeather BDD Automation Test Demo"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen>
+</iframe>

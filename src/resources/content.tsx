@@ -238,11 +238,6 @@ const gallery: Gallery = {
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
       src: "/images/gallery/received_1342310803144180.jpeg",
       alt: "image",
       orientation: "vertical",
@@ -264,6 +259,31 @@ const gallery: Gallery = {
     },
     {
       src: "/images/gallery/avatar.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/photo_6158730391339517560_y.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/photo_6158730391339517557_y.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/photo_6158730391339517558_y.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/photo_6158730391339517559_y.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/photo_6158730391339517556_y.jpg",
       alt: "image",
       orientation: "horizontal",
     },
